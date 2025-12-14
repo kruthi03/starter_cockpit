@@ -111,9 +111,9 @@ def main():
     df = (
         df
         .withColumn("current_price",  col("current_price").cast("double"))
-        .withColumn("market_cap",     col("market_cap").cast("double"))   # FLOAT in BigQuery
+        .withColumn("market_cap",     col("market_cap").cast("double"))
         .withColumn("market_cap_rank", col("market_cap_rank").cast("long"))
-        .withColumn("fully_diluted_valuation", col("fully_diluted_valuation").cast("long"))
+        .withColumn("fully_diluted_valuation", col("fully_diluted_valuation").cast("double"))   # FLOAT in BigQuery
         .withColumn("total_volume",   col("total_volume").cast("long"))
         .withColumn("high_24h",       col("high_24h").cast("double"))
         .withColumn("low_24h",        col("low_24h").cast("double"))
