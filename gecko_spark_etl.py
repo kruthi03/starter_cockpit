@@ -92,8 +92,8 @@ def main():
     hadoop_conf.set("google.cloud.auth.service.account.enable", "true")
     print("DEBUG: GCS Hadoop configuration set")
 
-    spark.conf.set("temporaryGcsBucket", "spark-bq-staging-eu")
-    print("DEBUG: set temporaryGcsBucket to spark-bq-staging-eu")
+    spark.conf.set("temporaryGcsBucket", "spark-bq-staging-euu")
+    print("DEBUG: set temporaryGcsBucket to spark-bq-staging-euu")
 
     print("DEBUG: fetching records from CoinGecko")
     records = fetch_top5_markets()
