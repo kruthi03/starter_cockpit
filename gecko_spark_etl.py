@@ -78,7 +78,7 @@ def main():
     spark = (
         SparkSession.builder
         .appName("gecko_spark_to_bigquery")
-        .master("local[1]")                     # force single local worker
+        .master("local[1]")                      # force single local worker
         .config("spark.python.worker.reuse", "false")
         .getOrCreate()
     )
@@ -107,11 +107,11 @@ def main():
     print("DEBUG: schema after json read:")
     df.printSchema()
 
-    # Cast types to match BigQuery schema (only FLOAT, INTEGER, STRING, TIMESTAMP)
+    # Cast types to match BigQuery schema (FLOAT, INTEGER, STRING, TIMESTAMP)
     df = (
         df
         .withColumn("current_price",  col("current_price").cast("double"))
-        .withColumn("market_cap",     col("market_cap").cast("long"))
+        .withColumn("market_cap",     col("market_cap").cast("double"))   # FLOAT in BigQuery
         .withColumn("market_cap_rank", col("market_cap_rank").cast("long"))
         .withColumn("fully_diluted_valuation", col("fully_diluted_valuation").cast("long"))
         .withColumn("total_volume",   col("total_volume").cast("long"))
