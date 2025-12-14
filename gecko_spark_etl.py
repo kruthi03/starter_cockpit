@@ -80,6 +80,7 @@ def main():
         .appName("gecko_spark_to_bigquery")
         .master("local[1]")                      # force single local worker
         .config("spark.python.worker.reuse", "false")
+        .config("spark.python.use.daemon", "false")  # avoid daemon socket issues
         .getOrCreate()
     )
     print("DEBUG: Spark version =", spark.version)
@@ -113,7 +114,7 @@ def main():
         .withColumn("current_price",  col("current_price").cast("double"))
         .withColumn("market_cap",     col("market_cap").cast("double"))
         .withColumn("market_cap_rank", col("market_cap_rank").cast("long"))
-        .withColumn("fully_diluted_valuation", col("fully_diluted_valuation").cast("double"))   # FLOAT in BigQuery
+        .withColumn("fully_diluted_valuation", col("fully_diluted_valuation").cast("double"))
         .withColumn("total_volume",   col("total_volume").cast("long"))
         .withColumn("high_24h",       col("high_24h").cast("double"))
         .withColumn("low_24h",        col("low_24h").cast("double"))
