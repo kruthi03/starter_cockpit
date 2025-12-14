@@ -21,7 +21,7 @@ HEADERS_CMC = {
     "Accept": "application/json",
 }
 
-PROJECT_ID = "tokyo-data-473514-h8"
+PROJECT_ID = "dm2-exam-481212"
 DATASET_ID = "crypto_analytics"
 LISTINGS_TABLE_ID = "cmc_listings_latest"
 

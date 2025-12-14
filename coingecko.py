@@ -17,7 +17,7 @@ if not API_KEY:
 BASE_URL = "https://api.coingecko.com/api/v3"
 VS_CURRENCY = "usd"
 
-PROJECT_ID = "tokyo-data-473514-h8"
+PROJECT_ID = "dm2-exam-481212"
 DATASET_ID = "crypto_analytics"
 TABLE_ID = "top5_markets"
 
