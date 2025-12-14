@@ -115,7 +115,7 @@ def main():
         .withColumn("market_cap",     col("market_cap").cast("double"))
         .withColumn("market_cap_rank", col("market_cap_rank").cast("long"))
         .withColumn("fully_diluted_valuation", col("fully_diluted_valuation").cast("double"))
-        .withColumn("total_volume",   col("total_volume").cast("long"))
+        .withColumn("total_volume",   col("total_volume").cast("double"))
         .withColumn("high_24h",       col("high_24h").cast("double"))
         .withColumn("low_24h",        col("low_24h").cast("double"))
         .withColumn("price_change_24h",             col("price_change_24h").cast("double"))
