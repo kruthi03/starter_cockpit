@@ -17,7 +17,7 @@ print("DEBUG: PYSPARK_DRIVER_PYTHON =", os.getenv("PYSPARK_DRIVER_PYTHON"))
 load_dotenv()
 print("DEBUG: after load_dotenv, COINGECKO_API_KEY present =", "COINGECKO_API_KEY" in os.environ)
 
-PROJECT_ID = "tokyo-data-473514-h8"
+PROJECT_ID = "dm2-exam-481212"
 DATASET = "crypto_analytics"
 TABLE = "top5_markets"
 VS_CURRENCY = "usd"

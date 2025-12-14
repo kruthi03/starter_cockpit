@@ -17,7 +17,7 @@ print("DEBUG: PYSPARK_DRIVER_PYTHON =", os.getenv("PYSPARK_DRIVER_PYTHON"))
 load_dotenv()
 print("DEBUG: after load_dotenv, CMC_API_KEY present =", "CMC_API_KEY" in os.environ)
 
-PROJECT_ID = "tokyo-data-473514-h8"
+PROJECT_ID = "dm2-exam-481212"
 DATASET = "crypto_analytics"
 TABLE = "cmc_listings_latest"
 
@@ -116,7 +116,7 @@ def main():
     print("DEBUG: GCS Hadoop configuration set")
 
     spark.conf.set("temporaryGcsBucket", "spark-bq-staging-euu")
-    print("DEBUG: set temporaryGcsBucket to spark-bq-staging-eu")
+    print("DEBUG: set temporaryGcsBucket to spark-bq-staging-euu")
 
     print("DEBUG: fetching records from CMC")
     records = fetch_cmc_listings()
